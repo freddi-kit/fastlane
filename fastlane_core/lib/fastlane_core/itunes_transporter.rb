@@ -296,15 +296,7 @@ module FastlaneCore
         ].compact.join(' ') # compact gets rid of the possibly nil ENV value
       else
         [
-          Helper.transporter_java_executable_path.shellescape,
-          "-Djava.ext.dirs=#{Helper.transporter_java_ext_dir.shellescape}",
-          '-XX:NewSize=2m',
-          '-Xms32m',
-          '-Xmx1024m',
-          '-Xms1024m',
-          '-Djava.awt.headless=true',
-          '-Dsun.net.http.retryPost=false',
-          java_code_option,
+          Helper.transporter_executable_path.shellescape,
           '-m upload',
           ("-u #{username.shellescape}" unless use_jwt),
           ("-p #{password.shellescape}" unless use_jwt),
@@ -334,15 +326,7 @@ module FastlaneCore
         ].compact.join(' ') # compact gets rid of the possibly nil ENV value
       else
         [
-          Helper.transporter_java_executable_path.shellescape,
-          "-Djava.ext.dirs=#{Helper.transporter_java_ext_dir.shellescape}",
-          '-XX:NewSize=2m',
-          '-Xms32m',
-          '-Xmx1024m',
-          '-Xms1024m',
-          '-Djava.awt.headless=true',
-          '-Dsun.net.http.retryPost=false',
-          java_code_option,
+          Helper.transporter_executable_path.shellescape,
           '-m verify',
           ("-u #{username.shellescape}" unless use_jwt),
           ("-p #{password.shellescape}" unless use_jwt),
@@ -371,15 +355,7 @@ module FastlaneCore
         ].compact.join(' ')
       else
         [
-          Helper.transporter_java_executable_path.shellescape,
-          "-Djava.ext.dirs=#{Helper.transporter_java_ext_dir.shellescape}",
-          '-XX:NewSize=2m',
-          '-Xms32m',
-          '-Xmx1024m',
-          '-Xms1024m',
-          '-Djava.awt.headless=true',
-          '-Dsun.net.http.retryPost=false',
-          java_code_option,
+          Helper.transporter_executable_path.shellescape,
           '-m lookupMetadata',
           ("-u #{username.shellescape}" unless use_jwt),
           ("-p #{password.shellescape}" unless use_jwt),
@@ -406,15 +382,7 @@ module FastlaneCore
         ].compact.join(' ')
       else
         [
-          Helper.transporter_java_executable_path.shellescape,
-          "-Djava.ext.dirs=#{Helper.transporter_java_ext_dir.shellescape}",
-          '-XX:NewSize=2m',
-          '-Xms32m',
-          '-Xmx1024m',
-          '-Xms1024m',
-          '-Djava.awt.headless=true',
-          '-Dsun.net.http.retryPost=false',
-          java_code_option,
+          Helper.transporter_executable_path.shellescape,
           '-m provider',
           ("-u #{username.shellescape}" unless use_jwt),
           ("-p #{password.shellescape}" unless use_jwt),

@@ -205,6 +205,10 @@ module FastlaneCore
       return File.join(self.itms_path, 'bin')
     end
 
+    def self.transporter_executable_path
+      return File.join(self.transporter_user_dir, 'iTMSTransporter')
+    end
+
     def self.transporter_java_path
       return File.join(self.itms_path, 'java')
     end
